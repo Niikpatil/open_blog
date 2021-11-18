@@ -5,8 +5,8 @@ function App() {
   const articals = [
     {
       id: 1,
-      title: "Meditaion",
-      content: "Meditaion keeps your mental helth good.",
+      title: "Meditation",
+      content: "Meditation keeps your mental helth good.",
     },
     {
       id: 2,
