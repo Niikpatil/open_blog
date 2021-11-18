@@ -1,12 +1,29 @@
-// import logo from './logo.svg';
-// import "./App.css";
+import { Main } from "./components/Layouts/Main";
+import { Blogs } from "./components/Pages/Blogs";
 
 function App() {
+  const articals = [
+    {
+      id: 1,
+      title: "Meditaion",
+      content: "Meditaion keeps your mental helth good.",
+    },
+    {
+      id: 2,
+      title: "Stay fit",
+      content: "Physical activity important for Health",
+    },
+    {
+      id: 3,
+      title: "Running",
+      content: "Keep your Heart helthy",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <h1> Hello Blog</h1>
-      </header>
+      <Main>
+        <Blogs articals={articals} />
+      </Main>
     </div>
   );
 }
