@@ -1,8 +1,20 @@
+import React from "react";
+import { useState } from "react";
 import { Main } from "./components/Layouts/Main";
 import { Blogs } from "./components/Pages/Blogs";
 
 function App() {
-  const articals = [
+  const onDelete = (artical) => {
+    // console.log(`Aricle get deleted`, artical);
+
+    setArticals(
+      articals.filter((e) => {
+        return e !== artical;
+      })
+    );
+  };
+
+  const [articals, setArticals] = useState([
     {
       id: 1,
       title: "Meditation",
@@ -18,11 +30,12 @@ function App() {
       title: "Running",
       content: "Keep your Heart helthy",
     },
-  ];
+  ]);
+
   return (
     <div className="App">
       <Main>
-        <Blogs articals={articals} />
+        <Blogs articals={articals} onDelete={onDelete} />
       </Main>
     </div>
   );
