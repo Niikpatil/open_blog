@@ -12,10 +12,11 @@ export const BlogForm = ({ addBlog }) => {
       alert("Title cannot be blank");
     } else if (!content) {
       alert("Content cannot be blank");
+    } else {
+      addBlog(title, content);
+      setTitle("");
+      setContent("");
     }
-    addBlog(title, content);
-    setTitle("");
-    setContent("");
   };
 
   return (
