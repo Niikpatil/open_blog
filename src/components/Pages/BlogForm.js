@@ -8,11 +8,14 @@ export const BlogForm = ({ addBlog }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!title) {
+      alert("Title cannot be blank");
+    } else if (!content) {
+      alert("Content cannot be blank");
+    }
     addBlog(title, content);
-    // setTitle("");
-    // setContent("");
-
-    console.log(e.target.value);
+    setTitle("");
+    setContent("");
   };
 
   return (

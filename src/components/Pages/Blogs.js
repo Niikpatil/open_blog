@@ -20,7 +20,7 @@ export const Blogs = ({ articals, onDelete }) => {
       ) : (
         articals.map((artical) => {
           return (
-            <div key={artical.id}>
+            <div key={artical.sno}>
               <BlogItem artical={artical} onDelete={onDelete} />
             </div>
           );

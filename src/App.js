@@ -29,17 +29,17 @@ function App() {
 
   const [articals, setArticals] = useState([
     {
-      id: 1,
+      sno: 1,
       title: "Meditation",
       content: "Meditation keeps your mental helth good.",
     },
     {
-      id: 2,
+      sno: 2,
       title: "Stay fit",
       content: "Physical activity important for Health",
     },
     {
-      id: 3,
+      sno: 3,
       title: "Running",
       content: "Keep your Heart helthy",
     },
@@ -47,8 +47,8 @@ function App() {
 
   return (
     <div className="App">
-      <BlogForm addBlog={addBlog} />
       <Main>
+        <BlogForm addBlog={addBlog} />
         <Blogs articals={articals} onDelete={onDelete} />
       </Main>
     </div>
