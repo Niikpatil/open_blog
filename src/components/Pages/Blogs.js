@@ -1,5 +1,4 @@
 import React from "react";
-import { BlogForm } from "./BlogForm";
 import { BlogItem } from "./BlogItem";
 
 export const Blogs = ({ articals, onDelete }) => {
@@ -14,7 +13,6 @@ export const Blogs = ({ articals, onDelete }) => {
 
   return (
     <div>
-      <BlogForm />
       <h1>Articals for Readers</h1>
       <ColoredLine color="blue" />
       {articals.length <= 0 ? (

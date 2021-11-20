@@ -8,9 +8,6 @@ export const BlogItem = ({ artical, onDelete }) => {
           <h5 className="card-title">{artical.title}</h5>
           <p className="card-text"> {artical.content}</p>
           <div className="btn btn-sm offset-md-10 md-col-2">
-            <button className="btn btn-sm btn-warning">
-              <b>Edit</b>
-            </button>
             <button
               className="btn btn-sm btn-danger m-2"
               onClick={() => onDelete(artical)}

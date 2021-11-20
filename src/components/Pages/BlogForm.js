@@ -1,21 +1,25 @@
 import React from "react";
 import { useState } from "react";
 
-export const BlogForm = () => {
+export const BlogForm = ({ addBlog }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // clog;
+    addBlog(title, content);
+    // setTitle("");
+    // setContent("");
+
+    console.log(e.target.value);
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label for="title" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="title" className="form-label">
             Title
           </label>
           <input
@@ -26,12 +30,12 @@ export const BlogForm = () => {
               setTitle(e.target.value);
             }}
             id="title"
-            class="form-control"
+            className="form-control"
             placeholder="Hope this title grabe readers attention"
           />
         </div>
-        <div class="mb-3">
-          <label for="content" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="content" className="form-label">
             Article
           </label>
           <textarea
@@ -42,11 +46,11 @@ export const BlogForm = () => {
               setContent(e.target.value);
             }}
             id="title"
-            class="form-control"
+            className="form-control"
             placeholder="Please write Something that fascinate the readers mind..."
           />
         </div>
-        <button type="submit" class="btn btn-sm btn-secondary">
+        <button type="submit" className="btn btn-sm btn-secondary">
           Submit
         </button>
       </form>
