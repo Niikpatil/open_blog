@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
-// import { Footer } from "./Footer";
+import { Footer } from "./Footer";
 
 export const Main = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ export const Main = ({ children }) => {
       <div className="mt-2 p-5 rounded">
         <div className="col-sm-8 mx-auto">{children}</div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
