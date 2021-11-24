@@ -1,8 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Main } from "./components/Layouts/Main";
+import { About } from "./components/Pages/About";
 import { BlogForm } from "./components/Pages/BlogForm";
 import { Blogs } from "./components/Pages/Blogs";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   // To store the user data we use localStorage, it get stored in BrowserDom
@@ -43,7 +46,7 @@ function App() {
   const [articals, setArticals] = useState(initBlog);
 
   //                     IMP Note
-  // This useeffectHook prevent the loading of articals
+  // This usee` ffectHook prevent the loading of articals
   // until the users data get updated in setArticals function
 
   useEffect(() => {
@@ -52,10 +55,39 @@ function App() {
 
   return (
     <div className="App">
-      <Main>
-        <BlogForm addBlog={addBlog} />
-        <Blogs articals={articals} onDelete={onDelete} />
-      </Main>
+      <Router>
+        <Switch>
+          <Main>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return (
+                  <div>
+                    <Blogs articals={articals} onDelete={onDelete} />
+                  </div>
+                );
+              }}
+            ></Route>
+
+            <Route
+              exact
+              path="/addblog"
+              render={() => {
+                return (
+                  <div>
+                    <BlogForm addBlog={addBlog} />
+                  </div>
+                );
+              }}
+            ></Route>
+
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Main>
+        </Switch>
+      </Router>
     </div>
   );
 }
