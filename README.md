@@ -5,6 +5,11 @@
 - ReactJs
 - Bootstrap5
 
+### Project Link
+
+[Netlify](https://openblog22.netlify.app)
+[Github](https://github.com/Niikpatil/open_blog)
+
 ## Project Description
 
 ![screen shot](https://github.com/Niikpatil/open_blog/blob/master/public/project_pics/Articles.png)
@@ -21,9 +26,6 @@
 
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Project Link
-
-[Github](https://github.com/Niikpatil/open_blog)
 
 # License
 
