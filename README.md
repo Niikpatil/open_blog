@@ -7,8 +7,8 @@
 
 ### Project Link
 
-[Netlify](https://openblog22.netlify.app)
-[Github](https://github.com/Niikpatil/open_blog)
+- [Netlify](https://openblog22.netlify.app)
+- [Github](https://github.com/Niikpatil/open_blog)
 
 ## Project Description
 
