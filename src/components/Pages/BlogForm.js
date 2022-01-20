@@ -35,7 +35,7 @@ export const BlogForm = ({ addBlog }) => {
             }}
             id="title"
             className="form-control"
-            placeholder="Hope this title grabe readers attention"
+            placeholder="Hope this title grab readers attention"
           />
         </div>
         <div className="mb-3">
