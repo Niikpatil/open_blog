@@ -9,13 +9,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   // To store the user data we use localStorage, it get stored in BrowserDom
-  // let initBlog;
+  let initBlog;
 
-  // if (localStorage.getItem("articals") === null) {
-  //   initBlog = [];
-  // } else {
-  //   initBlog = JSON.parse(localStorage.getItem("articals"));
-  // }
+  if (localStorage.getItem("articals") === null) {
+    initBlog = [];
+  } else {
+    initBlog = JSON.parse(localStorage.getItem("articals"));
+  }
 
   const onDelete = (artical) => {
     setArticals(
@@ -43,10 +43,12 @@ function App() {
     setArticals([...articals, myBlog]);
   };
 
+
+
   const [articals, setArticals] = useState([
     {
       id: 1,
-      title: "Meditation",
+      title: "Meditaion",
       content: "Meditaion keeps your mental helth good.",
     },
     {
@@ -59,7 +61,7 @@ function App() {
       title: "Running",
       content: "Keep your Heart helthy",
     },
-  ]);
+]);
 
   //                     IMP Note
   // This usee` ffectHook prevent the loading of articals
